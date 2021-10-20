@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <script src="./calculator.js"></script>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <input id="values" type="number" />
+    <label>
+      <input type="radio" name="operator" id="addition" value="+" />
+      Addition
+    </label>
+    <label>
+      <input type="radio" name="operator" id="subtraction" value="-" />
+      Subtraction
+    </label>
+    <label>
+      <input type="radio" name="operator" id="multiplication" value="*" />
+      Multiplication
+    </label>
+    <label>
+      <input type="radio" name="operator" id="division" value="/" />
+      Division
+    </label>
+    <button id="enter" type="button">ENTER</button>
+    <button id="equal" type="button">EQUAL</button>
+
+    <script>
+      const enterButton = document.getElementById("enter");
+
+      enterButton.onclick = function () {
+        let enteredValue = document.getElementById("values");
+        let enteredOperator = document.querySelector(
+          'input[name= "operator" ]:checked'
+        );
+        console.log(enteredValue.value);
+        calculator.enter(enteredValue.value);
+
+        console.log(enteredOperator.value);
+        calculator.enter(enteredOperator.value);
+
+        console.log(calculator._arrayOfEntries);
+        // calculator.enter(+enteredValue);
+        enteredValue.value = "";
+      };
+    </script>
+  </body>
+</html>
