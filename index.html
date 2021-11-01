@@ -15,7 +15,8 @@
   <body>
     <div class="container">
       <h1>Calculator</h1>
-      <form id="calculatorForm">
+
+      <form id="calculatorForm" class="mb-3">
         <div class="form-group">
           <label for="firstNumber">First Number</label>
           <input
@@ -84,6 +85,7 @@
 
         <button class="btn btn-primary btn-md" type="button">Equal</button>
       </form>
+      <h2>Results</h2>
     </div>
 
     <script src="./calculator.js"></script>
@@ -108,7 +110,7 @@
         calculator.enter(operator.value);
         calculator.enter(+secondNumber.value);
 
-        const result = document.createElement("h2");
+        const result = document.createElement("p");
 
         result.innerText = calculator.equal();
 
