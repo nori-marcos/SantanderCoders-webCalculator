@@ -82,46 +82,15 @@
             name="secondNumber"
           />
         </div>
-
-        <button class="btn btn-primary btn-md" type="button">Equal</button>
       </form>
+      <button class="btn btn-primary btn-md mb-3" type="button">Equal</button>
+      <button class="btn btn-danger btn-md mb-3" type="button">Clear</button>
       <h2>Results</h2>
+      <ul class="list-group list-group-flush"></ul>
     </div>
 
     <script src="./calculator.js"></script>
-    <script>
-      const container = document.querySelector("div");
-
-      console.log(firstNumber);
-
-      const equalButton = document.querySelector("button");
-
-      equalButton.addEventListener("click", calculate);
-
-      function calculate() {
-        const firstNumber = document.querySelectorAll("input.numberInput")[0];
-        const secondNumber = document.querySelectorAll("input.numberInput")[1];
-
-        const operator = document.querySelector(
-          'input[name="operator"]:checked'
-        );
-
-        calculator.enter(+firstNumber.value);
-        calculator.enter(operator.value);
-        calculator.enter(+secondNumber.value);
-
-        const result = document.createElement("p");
-
-        result.innerText = calculator.equal();
-
-        document.querySelector("div").appendChild(result);
-
-        calculator.reset();
-
-        document.getElementById("calculatorForm").reset();
-      }
-    </script>
-
+    <script src="main.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
